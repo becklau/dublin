@@ -129,9 +129,10 @@ html{
     opacity: 1; /* Show the caption when hovering over the image container */
 }
 
-/* .reverse{
-    
-} */
+.reverse{
+    display: flex;
+    flex-direction: column-reverse;
+}
 
 
 @media (prefers-reduced-motion:reduce) {
