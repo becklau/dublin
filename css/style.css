@@ -1,9 +1,21 @@
 body{
     font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif'
 }
+main{
+    margin: 64px;
+}
+
 h1{
     text-align: center;
+    color: white;
 }
+
+header {
+    background-color: #181818; /* Set background color for header */
+    padding: 20px 0;
+    margin: 64px;
+}
+
 
 #skip-link {
   position: relative;
@@ -13,10 +25,11 @@ h1{
 
 #skip-link:focus {
   top: 10px; /* Move it into view when focused */
+  transition: 1s
 }
 
 .navbar{
-    background-color: #1a3e06;
+    background-color: #181818;
     overflow: hidden;
 
 }
@@ -28,6 +41,7 @@ h1{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    flex-wrap: wrap;
 }
 
 .nav-link{
@@ -40,9 +54,105 @@ h1{
 
 .nav-link:hover,
 .nav-link:focus{
-    background-color: #435e34;
+    background-color: #ebebeb;
+    color:#000000
 }
 
 html{
     scroll-behavior: smooth;
+}
+
+.image-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px;
+    grid-row-gap: 20px;
+}
+
+.image-grid img{
+    width: 80%;
+    width: 100%;
+    height: auto;
+    transition: filter 0.3s;
+
+    /* border-radius: 100% 0% 30% 70% / 100% 0% 100% 0% ; */
+}
+
+.image-grid img:hover {
+    filter: grayscale(100%);
+}
+
+.image-caption {
+    position: relative;
+    text-align: center;
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+
+.image-grid img:hover + .image-caption {
+    opacity: 1;
+}
+
+.image-container {
+    position: relative; /* Ensure proper positioning of the caption relative to the image */
+}
+
+.image-caption {
+    position: absolute; /* Position the caption relative to its container */
+    bottom: 0; /* Align the caption to the bottom of the container */
+    left: 0; /* Align the caption to the left of the container */
+    width: 100%; /* Make the caption span the full width of its container */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for the caption */
+    color: white; /* Text color for the caption */
+    padding: 10px; /* Add padding to the caption */
+    box-sizing: border-box; /* Include padding in the width and height calculations */
+    transition: opacity 0.3s; /* Smooth transition for the opacity property */
+    opacity: 0; /* Initially hide the caption */
+}
+
+.image-container:hover .image-caption {
+    opacity: 1; /* Show the caption when hovering over the image container */
+}
+
+
+@media (prefers-reduced-motion:reduce) {
+    html{
+        scroll-behavior: auto;
+    }
+    *{
+        transition: 0s !important
+    }
+}
+
+@media (prefers-color-scheme:dark){
+    body{
+        background: #333;
+        color: white
+    }
+    #skip-link {
+        color: #fff;        
+    }
+    .navbar{
+        background-color: #ffffff;
+        overflow: hidden;
+    }
+    .nav-link{
+        color:white;
+    }
+    header {
+        background-color: #ffffff;
+    }
+    h1{
+        text-align: center;
+        color: #333;
+    }
+    
+}
+@media screen and (min-width: 776px){
+    .blog-gallery{
+        grid-template-columns: 45% 45%;
+        grid-gap: 20px
+    }
 }
