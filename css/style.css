@@ -10,11 +10,21 @@ h1{
     color: white;
 }
 
+h2{
+    text-align: left;
+    color: rgb(0, 0, 0);
+}
+
 header {
     background-color: #181818; /* Set background color for header */
     padding: 20px 0;
     margin: 64px;
 }
+
+footer{
+    margin: 64px;
+}
+
 
 
 #skip-link {
@@ -80,7 +90,7 @@ html{
     /* border-radius: 100% 0% 30% 70% / 100% 0% 100% 0% ; */
 }
 
-.image-grid img:hover {
+.image-grid img:hover, .image-grid img:focus {
     filter: grayscale(100%);
 }
 
@@ -91,12 +101,15 @@ html{
     opacity: 0;
 }
 
-.image-grid img:hover + .image-caption {
+.image-grid img:hover, .image-grid img:focus  + .image-caption {
     opacity: 1;
 }
 
 .image-container {
     position: relative; /* Ensure proper positioning of the caption relative to the image */
+}
+.image-container:last-child {
+    grid-column: 1/-1;
 }
 
 .image-caption {
@@ -115,6 +128,10 @@ html{
 .image-container:hover .image-caption {
     opacity: 1; /* Show the caption when hovering over the image container */
 }
+
+/* .reverse{
+    
+} */
 
 
 @media (prefers-reduced-motion:reduce) {
@@ -137,6 +154,7 @@ html{
     .navbar{
         background-color: #ffffff;
         overflow: hidden;
+        
     }
     .nav-link{
         color:white;
@@ -147,6 +165,13 @@ html{
     h1{
         text-align: center;
         color: #333;
+    }
+    h2{
+        color: rgb(255, 255, 255);
+    }
+
+    .nav-link{
+        color:#333;
     }
     
 }
