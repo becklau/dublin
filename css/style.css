@@ -108,9 +108,9 @@ html{
 .image-container {
     position: relative; /* Ensure proper positioning of the caption relative to the image */
 }
-.image-container:last-child {
+/* .image-container:last-child {
     grid-column: 1/-1;
-}
+} */
 
 .image-caption {
     position: absolute; /* Position the caption relative to its container */
