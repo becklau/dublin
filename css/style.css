@@ -2,7 +2,7 @@ body{
     font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif'
 }
 main{
-    margin: 64px;
+    margin: 32px;
 }
 
 h1{
@@ -16,16 +16,14 @@ h2{
 }
 
 header {
-    background-color: #181818; /* Set background color for header */
+    background-color: #181818;
     padding: 20px 0;
-    margin: 64px;
+    margin: 32px;
 }
 
 footer{
-    margin: 64px;
+    margin: 32px;
 }
-
-
 
 #skip-link {
   position: relative;
@@ -34,7 +32,7 @@ footer{
 }
 
 #skip-link:focus {
-  top: 10px; /* Move it into view when focused */
+  top: 10px;
   transition: 1s
 }
 
@@ -74,7 +72,6 @@ html{
 
 .image-grid{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 10px;
@@ -86,8 +83,6 @@ html{
     width: 100%;
     height: auto;
     transition: filter 0.3s;
-
-    /* border-radius: 100% 0% 30% 70% / 100% 0% 100% 0% ; */
 }
 
 .image-grid img:hover, .image-grid img:focus {
@@ -106,23 +101,23 @@ html{
 }
 
 .image-container {
-    position: relative; /* Ensure proper positioning of the caption relative to the image */
+    position: relative;
 }
 /* .image-container:last-child {
     grid-column: 1/-1;
 } */
 
 .image-caption {
-    position: absolute; /* Position the caption relative to its container */
-    bottom: 0; /* Align the caption to the bottom of the container */
-    left: 0; /* Align the caption to the left of the container */
-    width: 100%; /* Make the caption span the full width of its container */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for the caption */
-    color: white; /* Text color for the caption */
-    padding: 10px; /* Add padding to the caption */
-    box-sizing: border-box; /* Include padding in the width and height calculations */
-    transition: opacity 0.3s; /* Smooth transition for the opacity property */
-    opacity: 0; /* Initially hide the caption */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white; 
+    padding: 10px;
+    box-sizing: border-box; 
+    transition: opacity 0.3s;
+    opacity: 0;
 }
 
 .image-container:hover .image-caption {
@@ -133,6 +128,10 @@ html{
     display: flex;
     flex-direction: column-reverse;
 }
+
+/* .current::before{
+    content: ""
+} */
 
 
 @media (prefers-reduced-motion:reduce) {
@@ -176,9 +175,23 @@ html{
     }
     
 }
-@media screen and (min-width: 776px){
+@media screen and (min-width: 772px){
     .blog-gallery{
         grid-template-columns: 45% 45%;
         grid-gap: 20px
     }
+    main{
+        margin: 64px;
+    }
+    header {
+        margin: 64px;
+    }
+    footer{
+        margin: 64px;
+    }
+
+}
+
+.current{
+    text-decoration: underline;
 }
