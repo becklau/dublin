@@ -129,9 +129,47 @@ html{
     flex-direction: column-reverse;
 }
 
-/* .current::before{
-    content: ""
-} */
+
+/* Glendalough and Kilkenny */
+.container{
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: repeat(6, 1fr);
+    /* grid-template-rows: repeat(4, 300px); */
+    gap: 20px;
+}
+.container > div{
+    overflow: hidden;
+} 
+.container img {
+    width: 100%;
+    margin: auto;
+}
+
+.container p{
+    margin:0px
+}
+
+.mainImg{
+    grid-column: span 6;
+}
+
+.mainImg img{
+    float: left;
+    width: 50%;
+    margin: 0px 20px 0px 0px;
+}
+
+.gridText{
+    grid-column: span 3;
+}
+
+.smallImg {
+    grid-column: span 2;
+}
+
+
 
 
 @media (prefers-reduced-motion:reduce) {
