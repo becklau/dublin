@@ -1,8 +1,9 @@
 body{
-    font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif'
+    font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
+    margin: 0;
 }
 main{
-    margin: 32px;
+    margin: 16px;
 }
 
 h1{
@@ -17,18 +18,25 @@ h2{
 
 header {
     background-color: #181818;
-    padding: 20px 0;
-    margin: 32px;
+    padding: 20px 0px;
+    margin: 0px;
+    margin-top: -25px;
+}
+
+p{
+    margin-bottom: 36px;
 }
 
 footer{
-    margin: 32px;
+    margin: 16px;
 }
 
 #skip-link {
   position: relative;
   top: -40px;
   transition: top 0.5s;
+  margin-left: 16px;
+  background-color: #fff;
 }
 
 #skip-link:focus {
@@ -153,12 +161,14 @@ html{
 
 .mainImg{
     grid-column: span 6;
+    font-size: 1.3em;
 }
 
 .mainImg img{
     float: left;
     width: 50%;
     margin: 0px 20px 0px 0px;
+    max-width: 500px;
 }
 
 .gridText{
@@ -169,6 +179,9 @@ html{
     grid-column: span 2;
 }
 
+.coming-soon h2{
+    text-align: center; 
+}
 
 
 
@@ -187,7 +200,7 @@ html{
         color: white
     }
     #skip-link {
-        color: #fff;        
+        background-color: #fff;       
     }
     .navbar{
         background-color: #ffffff;
@@ -222,7 +235,8 @@ html{
         margin: 64px;
     }
     header {
-        margin: 64px;
+        margin: 0px;
+        margin-top: -25px;
     }
     footer{
         margin: 64px;
