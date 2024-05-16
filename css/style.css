@@ -24,7 +24,7 @@ header {
 }
 
 p{
-    margin-bottom: 36px;
+    margin-bottom: 14px;
 }
 
 footer{
@@ -161,7 +161,6 @@ html{
 
 .mainImg{
     grid-column: span 6;
-    font-size: 1.3em;
 }
 
 .mainImg img{
@@ -224,6 +223,15 @@ html{
     .nav-link{
         color:#333;
     }
+
+    main a:link {
+        color:rgb(119, 194, 219);
+      }
+      
+      /* visited link */
+    main a:visited {
+        color:#d29edb;
+      }
     
 }
 @media screen and (min-width: 772px){
@@ -240,6 +248,10 @@ html{
     }
     footer{
         margin: 64px;
+    }
+
+    .mainImg{
+        font-size: 1.3em;
     }
 
 }
