@@ -14,11 +14,11 @@
     <h1>Exploring Ireland: A Study Abroad Journey</h1>
     <nav class = "navbar">
         <ul class="nav-list">
-            <li><a href="index.html" class="nav-link">About Us</a></li>
+            <li><a href="index.html" class="nav-link">About Me</a></li>
             <li><a href="dublin.html" class="nav-link current">Dublin</a></li>
             <li><a href="kilkenny.html" class="nav-link">Kilkenny and Glendalough</a></li>
             <li><a href="galway.html" class="nav-link">Galway</a></li>
-            <li><a href="cliffs.html" class="nav-link">Cliffs of Moher</a></li>
+            <li><a href="cliffs.html" class="nav-link">Giant's Causeway</a></li>
             <li><a href="blog.html" class="nav-link">Blog</a></li>
             <!-- <li><a href="gallery.html" class="nav-link">Gallery</a></li> -->
         </ul> 
@@ -27,9 +27,38 @@
 
 <main id = "main">
     <!-- <h2>Failte go Baile Atha Cliath!</h2> -->
-    <section class="coming-soon">
-        <h2>Dublin Coming Soon</h2>
+    
+    <!-- START REPEAT -->
+    <section>
+        <h2>Title</h2>
     </section>
+    <div class="containerPlace">
+        <div class="mainImg"><img src="" alt="" width="200"><p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        </div>
+    </div>
+    <!-- END REPEAT -->
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <button class = "buttonindex" type="button" data-filter="all">All</button>
+    <button class = "buttonindex" type="button" data-filter=".category-glen">BUTTON1</button>
+    <button class = "buttonindex" type="button" data-filter=".category-kilk">BUTTON2</button>
+
+    <div class="containerIndex">
+        <div class="image-container mix category-glen">
+            <img src="" alt="" width="200" tabindex="0">
+            <div class="image-caption"></div>
+        </div>
+    </div>
+    
 </main>
+<script src="mixdist/mixitup.min.js"></script>
+<script>
+    var containerE1 = document.querySelector('.containerIndex');
+    varmixer = mixitup(containerE1);
+</script>
 </body>
 </html>

@@ -15,11 +15,11 @@
     <h1>Exploring Ireland: A Study Abroad Journey</h1>
     <nav class = "navbar">
         <ul class="nav-list">
-            <li><a href="index.html" class="nav-link">About Us</a></li>
+            <li><a href="index.html" class="nav-link">About Me</a></li>
             <li><a href="dublin.html" class="nav-link">Dublin</a></li>
             <li><a href="kilkenny.html" class="nav-link">Kilkenny and Glendalough</a></li>
             <li><a href="galway.html" class="nav-link current">Galway</a></li>
-            <li><a href="cliffs.html" class="nav-link">Cliffs of Moher</a></li>
+            <li><a href="cliffs.html" class="nav-link">Giant's Causeway</a></li>
             <li><a href="blog.html" class="nav-link">Blog</a></li>
             <!-- <li><a href="gallery.html" class="nav-link">Gallery</a></li> -->
         </ul> 
@@ -28,9 +28,66 @@
 
 <main id = "main">
     <!-- <h2>Failte go Baile Atha Cliath!</h2> -->
-    <section class="coming-soon">
-        <h2>Galway Coming Soon</h2>
+    
+    <!-- START REPEAT -->
+    <section>
+        <h2>Galway</h2>
     </section>
+    <div class="containerPlace">
+        <div class="mainImg"><img src="images/18pier.jpg" alt="Man overlooking colorful houses over a river" width="200"><p>Galway, pronounced GAWL-way (Irish: Gaillimh), is a vibrant city and the county town of County Galway, situated between Lough Corrib and Galway Bay along the River Corrib. With a population of 85,910 according to the 2022 census, it stands as the most populous settlement in Connacht, the fifth most populous city on the island of Ireland, and the fourth most populous in the Republic of Ireland.</p>
+        <p>Its history dates back to 1124 when a fortification was built by the King of Connacht. By 1484, a municipal charter allowed citizens of the walled city to form a council and mayoralty, leading to its growth as a trading port controlled by merchant families known as the Tribes of Galway. While experiencing periods of decline, Galway has emerged as a bustling tourist destination, renowned for its festivals and events, notably the Galway International Arts Festival. In 2018, Galway was honored as the European Region of Gastronomy, highlighting its culinary offerings. Additionally, it shared the title of European Capital of Culture for 2020 with Rijeka, Croatia.</p>
+        <p>During my visit to Galway, I explored the lively streets, starting with a visit to the bustling market, where I indulged in a delicious pea and potato curry. The city's charm continued to captivate me as I strolled around, noting places to revisit later. The highlight of my day was the visit to the Computer and Communications Museum of Ireland, which exceeded my expectations. From retro gaming systems to insights into Ireland's tech evolution, the experience was enlightening.</p>
+        <p>We later relaxed at a pub near McDonagh's, savoring live music and good company. The exploration continued with a visit to Nimmos Pier for photos and fun in the grass before ending the night at a lively bar on the south side of town. It was a night filled with laughter and joy, exactly the energy I needed. We returned to the hostel around midnight, rejuvenated for our next adventure to the Cliffs of Moher.</p>
+        </div>
+    </div>
+    <!-- END REPEAT -->
+
+    <section>
+        <h2>Cliffs of Moher</h2>
+    </section>
+    <div class="containerPlace">
+        <div class="mainImg"><img src="images/19cliffs.jpg" alt="Landscape of cliffs on the waterside" width="200"><p>The Cliffs of Moher, pronounced "Muh-her" (Irish: Aillte an Mhothair), are awe-inspiring sea cliffs located on the southwestern edge of County Clare's Burren region in Ireland. Stretching for approximately 14 kilometers (9 miles), they offer breathtaking views of the Atlantic Ocean, reaching heights of up to 214 meters (702 feet) near O'Brien's Tower, constructed in 1835 by Sir Cornelius O'Brien. These cliffs, rising 120 meters (390 feet) above the ocean at Hag's Head to the south, are a prominent natural landmark, with their nearest settlements being Liscannor to the south and Doolin to the north.</p>
+        <p>Visitors to the cliffs, including those who ascend O'Brien's Tower, are treated to panoramic vistas that include sights such as the Aran Islands in Galway Bay, the Maumturks, and Twelve Pins mountain ranges to the north in County Galway, as well as Loop Head to the south. With approximately 1.5 million visits annually, the cliffs are among Ireland's most popular tourist attractions.</p>
+        <p>During my visit to the Cliffs of Moher, I was captivated by their beauty on a particularly lovely day. Walking along the right side of the cliffs, I immersed myself in the stunning scenery, capturing numerous photos along the way. Despite not feeling my best, I found solace sitting on the hillside while some of my group continued hiking. This unexpectedly became the highlight of my journey as I savored the sounds of nature and the countryside, enriched by the passing conversations of fellow visitors.</p>
+        </div>
+    </div>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <button class = "buttonindex" type="button" data-filter="all">All</button>
+    <button class = "buttonindex" type="button" data-filter=".category-galway">Galway</button>
+    <button class = "buttonindex" type="button" data-filter=".category-cliffs">Cliffs of Moher</button>
+
+    <div class="containerIndex">
+        <div class="image-container mix category-galway">
+            <img src="images/18street.jpg" alt="Busy Galway street with triangle flags in the colors of the Irish flag" width="200" tabindex="0">
+            <div class="image-caption">Galway</div>
+        </div>
+        <div class="image-container mix category-galway">
+            <img src="images/18pub.jpg" alt="Interior of a pub with red neon lights and old architecture" width="200" tabindex="0">
+            <div class="image-caption">Quays Bar</div>
+        </div>
+        <div class="image-container mix category-galway">
+            <img src="images/18bookstore.jpg" alt="Shelves and tables covered in books" width="200" tabindex="0">
+            <div class="image-caption">Charlie Byrne's Bookshop</div>
+        </div>
+        <div class="image-container mix category-galway">
+            <img src="images/18computer.jpg" alt="Old macboox computer" width="200" tabindex="0">
+            <div class="image-caption">Computer Museum</div>
+        </div>
+        <div class="image-container mix category-galway">
+            <img src="images/18art.jpg" alt="Wall art with geometric colorful shapes" width="200" tabindex="0">
+            <div class="image-caption">Art in Galway</div>
+        </div>
+
+        
+    </div>
+    
 </main>
+<script src="mixdist/mixitup.min.js"></script>
+<script>
+    var containerE1 = document.querySelector('.containerIndex');
+    varmixer = mixitup(containerE1);
+</script>
 </body>
 </html>

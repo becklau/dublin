@@ -1,3 +1,12 @@
+/* TAGS */
+
+header {
+    background-color: #181818;
+    padding: 20px 0px;
+    margin: 0px;
+    margin-top: -25px;
+}
+
 body{
     font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
     margin: 0;
@@ -16,13 +25,6 @@ h2{
     color: rgb(0, 0, 0);
 }
 
-header {
-    background-color: #181818;
-    padding: 20px 0px;
-    margin: 0px;
-    margin-top: -25px;
-}
-
 p{
     margin-bottom: 14px;
 }
@@ -31,6 +33,7 @@ footer{
     margin: 16px;
 }
 
+    /* line, used in blog page */
 hr {
     display: block;
     margin-top: 0.5em;
@@ -40,9 +43,13 @@ hr {
     border-style: inset;
     border-width: .5px;
     width:100%;
-  }
-  
+}
 
+html{
+    scroll-behavior: smooth;
+}
+  
+/* IDS */
 #skip-link {
   position: relative;
   top: -40px;
@@ -56,12 +63,14 @@ hr {
   transition: 1s
 }
 
+
+/* CLASSES */
+
+    /* NAVIGATION */
 .navbar{
     background-color: #181818;
     overflow: hidden;
-
 }
-
 .nav-list{
     list-style: none;
     display: flex;
@@ -71,7 +80,6 @@ hr {
     box-sizing: border-box;
     flex-wrap: wrap;
 }
-
 .nav-link{
     display: inline-block;
     padding: 16px 20px;
@@ -79,17 +87,13 @@ hr {
     text-decoration: none;
     display: center;
 }
-
 .nav-link:hover,
 .nav-link:focus{
     background-color: #ebebeb;
     color:#000000
 }
 
-html{
-    scroll-behavior: smooth;
-}
-
+    /* .IMAGE-GRID IS ONLY USED IN BLOG */
 .image-grid{
     display: grid;
     justify-items: center;
@@ -97,36 +101,32 @@ html{
     grid-gap: 10px;
     grid-row-gap: 20px;
 }
-
 .image-grid img{
     width: 80%;
     width: 100%;
     height: auto;
     transition: filter 0.3s;
 }
-
 .image-grid img:hover, .image-grid img:focus {
     filter: grayscale(100%);
 }
-
 .image-caption {
     position: relative;
     text-align: center;
     transition: opacity 0.3s;
     opacity: 0;
 }
-
 .image-grid img:hover, .image-grid img:focus  + .image-caption {
     opacity: 1;
 }
 
+
+    /* .IMAGE-CONTAINER IS USED IN BOTH INDEX AND BLOG */
 .image-container {
     position: relative;
 }
-/* .image-container:last-child {
-    grid-column: 1/-1;
-} */
 
+    /* .IMAGE-CAPTION IS USED IN BOTH INDEX AND BLOG */
 .image-caption {
     position: absolute;
     bottom: 0;
@@ -139,19 +139,43 @@ html{
     transition: opacity 0.3s;
     opacity: 0;
 }
-
 .image-container:hover .image-caption {
     opacity: 1; /* Show the caption when hovering over the image container */
 }
 
+    /* REVERSES THE BLOG POSTS */
 .reverse{
     display: flex;
     flex-direction: column-reverse;
 }
 
+    /* USED ONCE ON INDEX (FOR GALLERY), USED TWICE FOR THE SECTIONS OF KILKENNY */
+.containerIndex{
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* grid-template-rows: repeat(4, 300px); */
+    gap: 20px;
+}
+.containerIndex > div{
+    overflow: hidden;
+} 
+.containerIndex img {
+    width: 100%;
+    margin: auto;
+}
+.containerIndex p{
+    margin:0px;
+    margin-bottom: 14px;
+}
+.containerIndex img:hover, .containerIndex img:focus {
+    filter: grayscale(100%);
+}
 
-/* Glendalough and Kilkenny */
-.container{
+
+/* USED TWICE FOR THE SECTIONS OF KILKENNY */
+.containerPlace{
     display: grid;
     width: 100%;
     margin: 0 auto;
@@ -159,27 +183,21 @@ html{
     /* grid-template-rows: repeat(4, 300px); */
     gap: 20px;
 }
-
-
-.container > div{
+.containerPlace > div{
     overflow: hidden;
 } 
-.container img {
+.containerPlace img {
     width: 100%;
     margin: auto;
 }
-
-.container p{
-    margin:0px
+.containerPlace p{
+    margin-bottom:14px;
+    margin-top: 0px;
 }
-.container img:hover, .container img:focus {
-    filter: grayscale(100%);
-}
-
+    /* USED FOR TOP SECTION OF KILKENNY */
 .mainImg{
     grid-column: span 6;
 }
-
 .mainImg img{
     float: left;
     width: 50%;
@@ -187,18 +205,20 @@ html{
     max-width: 500px;
 }
 
-.gridText{
-    grid-column: span 3;
-}
-
+    /* USED FOR KILKENNY SMALL IMAGES */
 .smallImg {
     grid-column: span 2;
 }
 
+
+
+    /* FOR PAGES THAT DO NOT EXIST YET */
 .coming-soon h2{
     text-align: center; 
 }
 
+
+    /* FOR BUTTONS ON THE INDEX PAGE */
 .buttonindex {
     border: 2px solid black;
     background-color: white;
@@ -214,6 +234,7 @@ html{
 }
 
 
+/* MEDIA */
 @media (prefers-reduced-motion:reduce) {
     html{
         scroll-behavior: auto;
@@ -294,16 +315,15 @@ html{
         margin: 64px;
     }
 
-    .mainImg{
+    /* .mainImg{
         font-size: 1.3em;
-    }
+    } */
     .image-grid .container{
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 
     }
 
-}
-
+}    /* UNDERLINE CURRENT PAGE */
 .current{
     text-decoration: underline;
 }

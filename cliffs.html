@@ -1,39 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- https://www.favicon.cc/ -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- https://www.favicon.cc/ -->
     <link rel="icon" type="image/x-icon" href="/images/ceramicMan.png">
-    <title>Exploring Ireland: A Study Abroad Journey</title>
-        <link rel="stylesheet" href="css/accordion.css">
+        <title>Exploring Ireland: A Study Abroad Journey</title>
         <link rel="stylesheet" href="css/style.css" >
-        
-</head>
+    </head>
 <body>
-
-<a href = "#main" id = "skip-link">Skip to Main Content</a>
-
-<!-- DAY 1 --><hr>
+    <a href = "#main" id = "skip-link" >Skip to Main Content</a>
 <header>
     <h1>Exploring Ireland: A Study Abroad Journey</h1>
     <nav class = "navbar">
         <ul class="nav-list">
-            <li><a href="index.html" class="nav-link">About Us</a></li>
+            <li><a href="index.html" class="nav-link">About Me</a></li>
             <li><a href="dublin.html" class="nav-link">Dublin</a></li>
             <li><a href="kilkenny.html" class="nav-link">Kilkenny and Glendalough</a></li>
             <li><a href="galway.html" class="nav-link">Galway</a></li>
-            <li><a href="cliffs.html" class="nav-link">Cliffs of Moher</a></li>
-            <li><a href="blog.html" class="nav-link current">Blog</a></li>
+            <li><a href="cliffs.html" class="nav-link current">Giant's Causeway</a></li>
+            <li><a href="blog.html" class="nav-link">Blog</a></li>
             <!-- <li><a href="gallery.html" class="nav-link">Gallery</a></li> -->
         </ul> 
     </nav>
 </header>
 
-<section class="coming-soon">
-    <h2>Cliffs of Moher Coming Soon</h2>
-</section>
+<main id = "main">
+    <!-- <h2>Failte go Baile Atha Cliath!</h2> -->
+    
+    <!-- START REPEAT -->
+    <section>
+        <h2>The Giant's Causeway</h2>
+    </section>
+    <div class="containerPlace">
+        <div class="mainImg"><img src="images/12giantsStone.jpg" alt="Hexagonal Stones of different heights on the waterside" width="200"><p>The Giant's Causeway (Irish: Clochán an Aifir) is a remarkable area consisting of around 40,000 interlocking basalt columns, formed by an ancient volcanic fissure eruption. Located in County Antrim on Northern Ireland's north coast, about three miles northeast of Bushmills, it was declared a UNESCO World Heritage Site in 1986 and a national nature reserve in 1987. In a 2005 poll by Radio Times readers, it was named the fourth-greatest natural wonder in the United Kingdom.</p>
+        <p>The columns, most of which are hexagonal, with some having four, five, seven, or eight sides, create stepping stones that lead from the cliffs to the sea. The tallest columns reach about 40 ft in height, with the solidified lava in the cliffs reaching up to 90 ft thick in places. These formations date back 50 to 60 million years to the Paleocene Epoch when volcanic activity caused molten basalt to intrude through chalk beds, forming an extensive volcanic plateau. As the lava cooled, it contracted and fractured, creating the distinctive pillar-like structures seen today. The Thulean Plateau, of which the Giant's Causeway was originally a part, was formed during this period.</p>
+        <p>According to legend, the columns are remnants of a causeway built by the Irish giant Fionn mac Cumhaill (Finn MacCool), who was challenged to a fight by the Scottish giant Benandonner. One version of the myth suggests that Fionn defeated Benandonner, while another tells of Fionn's wife disguising him as a baby to scare Benandonner into fleeing back to Scotland, destroying the causeway behind him. Similar basalt columns can be found across the sea at Fingal's Cave on the Scottish Isle of Staffa, possibly influencing the legend.</p>
+        <p>This was one of the most impressive sights I've ever seen. We hiked down from the cliffs to the shore, where the views were absolutely spectacular. The polygonal rocks formed a natural pathway, and with waves crashing on the shore and small pools of water among the lower rocks, it was an unforgettable experience. I highly recommend visiting this incredible place to anyone.</p>
+        </div>
+    </div>
+    <!-- END REPEAT -->
 
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <button class = "buttonindex" type="button" data-filter="all">All</button>
+    <button class = "buttonindex" type="button" data-filter=".category-hike">Hike</button>
+    <button class = "buttonindex" type="button" data-filter=".category-causeway">Causeway</button>
+
+    <div class="containerIndex">
+        <div class="image-container mix category-causeway">
+            <img src="images/12giantWall.jpg" alt="Hexagonal rocks on the side of a large mountain" width="200" tabindex="0">
+            <div class="image-caption">Giant's Causeway Cliff</div>
+        </div>
+    </div>
+    
 </main>
+<script src="mixdist/mixitup.min.js"></script>
+<script>
+    var containerE1 = document.querySelector('.containerIndex');
+    varmixer = mixitup(containerE1);
+</script>
 </body>
 </html>
